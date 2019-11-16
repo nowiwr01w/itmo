@@ -21,7 +21,7 @@ Some paradigms course homeworks are left, but JS and Clojure tasks are in the re
   * [Context-free Grammar](https://github.com/nowiwr01/itmo/tree/master/discrete_math/2%20term/lab3)
 
 ## [Java Course](https://github.com/nowiwr01/itmo/tree/master/prog_intro)
-  There are some first term homeworks.
+  There are some first term homeworks. Description of each task is inside the root folder.
   * [Calculating numbers](https://github.com/nowiwr01/itmo/tree/master/prog_intro/HW1)
   * [Reversing matrix with spaces](https://github.com/nowiwr01/itmo/tree/master/prog_intro/HW2)
   * [Calculating letters in file](https://github.com/nowiwr01/itmo/tree/master/prog_intro/HW3)
@@ -35,7 +35,7 @@ Some paradigms course homeworks are left, but JS and Clojure tasks are in the re
   * [Expression Parser](https://github.com/nowiwr01/itmo/tree/master/prog_intro/HW11/src/expression)
   
 ## [Programming Paradigms Course](https://github.com/nowiwr01/itmo/tree/master/paradigms/)
-  There are some second term homeworks.
+  There are some second term homeworks. Description of each task is inside the root folder.
   * [Functional Expression Parser (JS)](https://github.com/nowiwr01/itmo/tree/master/paradigms/hw4)
   * [Object Expression Parser (JS)](https://github.com/nowiwr01/itmo/tree/master/paradigms/hw5)
   * [Exception Handling with Object Expression Parser (JS)](https://github.com/nowiwr01/itmo/tree/master/paradigms/hw6)
