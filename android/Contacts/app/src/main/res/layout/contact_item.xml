@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    app:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            style="@style/ProfileInfo"
+            android:layout_marginTop="4dp"
+            android:text="@string/name_contact_item"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/profile_prone_number"
+            style="@style/ProfileInfo"
+            android:layout_below="@id/profile_name"
+            android:text="@string/phone_contact_item" />
+
+        <ImageView
+            android:id="@+id/profile_img_send"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/icon_send_description"
+            android:src="@drawable/ic_send" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

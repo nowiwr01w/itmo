@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Contacts</string>
+
+    <string name="name_contact_item">Name</string>
+    <string name="phone_contact_item">Phone Number</string>
+    <string name="icon_send_description">Image contact</string>
+    <string name="search_title">Search</string>
+    <string name="not_found_image">Not found image</string>
+    <string name="not_found_string">Не найдено</string>
+
+    <plurals name="numberOfItems">
+        <item quantity="zero">Наёдено %d контактов</item>
+        <item quantity="one">Найден %d контакт</item>
+        <item quantity="few">Найдено %d контакта</item>
+        <item quantity="other">Найдено %d контактов</item>
+    </plurals>
+
+</resources>
