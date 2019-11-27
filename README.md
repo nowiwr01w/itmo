@@ -52,3 +52,4 @@ Some paradigms course homeworks are left, but JS and Clojure tasks are in the re
   * [Base Linux Concole Managing](https://github.com/nowiwr01/itmo/tree/master/os/lab1)
   * [Text Stream Processing](https://github.com/nowiwr01/itmo/tree/master/os/lab2)
   * [Information About Running Processes](https://github.com/nowiwr01/itmo/tree/master/os/lab3)
+  * [Process Management](https://github.com/nowiwr01/itmo/tree/master/os/lab4)
