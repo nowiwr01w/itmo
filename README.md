@@ -1,5 +1,9 @@
 # Material courses at ITMO University
 Some paradigms course homeworks are left, but JS and Clojure tasks are in the repo.
+## [Android Course](https://github.com/nowiwr01/itmo/tree/master/android/)
+  Description and screenshots of each task inside each folder
+  * [Contacts](https://github.com/nowiwr01/itmo/tree/master/android/Contacts)
+
 ## [Algorithms and Data Structures](https://github.com/nowiwr01/itmo/tree/master/algo/)
   There are some contests solutions. Description of each task inside each folder.
   * [Sortings, Heap, Binary search and Ternary search](https://github.com/nowiwr01/itmo/tree/master/algo/1%20term/lab1)
