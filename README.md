@@ -23,6 +23,7 @@ Some paradigms course homeworks are left, but JS and Clojure tasks are in the re
   * [Theory of Probability](https://github.com/nowiwr01/itmo/tree/master/discrete_math/2%20term/lab1)
   * [Finite Automatons](https://github.com/nowiwr01/itmo/tree/master/discrete_math/2%20term/lab2)
   * [Context-free Grammar](https://github.com/nowiwr01/itmo/tree/master/discrete_math/2%20term/lab3)
+  * [Hamiltonian Cycles](https://github.com/nowiwr01/itmo/tree/master/discrete_math/3%20term/lab1)
 
 ## [Java Course](https://github.com/nowiwr01/itmo/tree/master/prog_intro)
   There are some first term homeworks. Description of each task is inside the root folder.
