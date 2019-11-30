@@ -1,7 +1,7 @@
 # Material courses at ITMO University
 Some paradigms course homeworks are left, but JS and Clojure tasks are in the repo.
 ## [Android Course](https://github.com/nowiwr01/itmo/tree/master/android/)
-  Description and screenshots of each task inside each folder
+  Description and screenshots of each task are inside each folder
   * [Contacts](https://github.com/nowiwr01/itmo/tree/master/android/Contacts)
 
 ## [Algorithms and Data Structures](https://github.com/nowiwr01/itmo/tree/master/algo/)
@@ -61,3 +61,4 @@ Some paradigms course homeworks are left, but JS and Clojure tasks are in the re
   * [Text Stream Processing](https://github.com/nowiwr01/itmo/tree/master/os/lab2)
   * [Information About Running Processes](https://github.com/nowiwr01/itmo/tree/master/os/lab3)
   * [Process Management](https://github.com/nowiwr01/itmo/tree/master/os/lab4)
+  * [Work with the file-catalog system](https://github.com/nowiwr01/itmo/tree/master/os/lab5)
