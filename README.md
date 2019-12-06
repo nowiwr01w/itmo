@@ -3,6 +3,8 @@ Some paradigms course homeworks are left, but JS and Clojure tasks are in the re
 ## [Android Course](https://github.com/nowiwr01/itmo/tree/master/android/)
   Description and screenshots of each task are inside each folder
   * [Contacts](https://github.com/nowiwr01/itmo/tree/master/android/Contacts)
+  * [Networking](https://github.com/nowiwr01/itmo/tree/master/android/Networking)
+  * [Navigation](https://github.com/nowiwr01/itmo/tree/master/android/Navigation)
 
 ## [Algorithms and Data Structures](https://github.com/nowiwr01/itmo/tree/master/algo/)
   There are some contests solutions. Description of each task inside each folder.
