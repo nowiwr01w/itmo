@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbar)
 
-        myAsyncTask = lastCustomNonConfigurationInstance as? AsyncTaskHandlerJSON
+        myAsyncTask = (lastCustomNonConfigurationInstance as? AsyncTaskHandlerJSON) ?: AsyncTaskHandlerJSON(this)
         myAsyncTask?.attachActivity(this)
 
         Log.d(LOG_TAG, "Create MainActivity: " + this@MainActivity.hashCode())
@@ -60,11 +60,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun attachList(curList: ArrayList<Movie>?) {
         if (curList != null) {
-            movieAdapter = MovieAdapter(curList, applicationContext) {movie ->
-                val intent = Intent(this, MoviesActivity::class.java)
-                intent.putExtra(PICTURE_TAG, movie.picture)
-                intent.putExtra(TITLE_TAG, movie.title)
-                intent.putExtra(YEAR_TAG, movie.year)
+            movieAdapter = MovieAdapter(curList, applicationContext) { movie ->
+                val intent = Intent(this, MoviesActivity::class.java).apply {
+                    putExtra(YEAR_TAG, movie.year)
+                    putExtra(TITLE_TAG, movie.title)
+                    putExtra(PICTURE_TAG, movie.picture)
+                }
                 startActivity(intent)
             }
 
@@ -114,6 +115,8 @@ class MainActivity : AppCompatActivity() {
                 try {
                     jsonArray = JSONObject(text).getJSONArray("Search")
                 } catch (e: JSONException) {
+                    // Т.к. подгружаем первые 10 страниц, может не найтись столько фильмов по запросу.
+                    // Например "Interstellar"
                     break
                 }
 
@@ -129,7 +132,6 @@ class MainActivity : AppCompatActivity() {
                     publishProgress(j + 10 * (i - 1))
                 }
             }
-
             return movieList
         }
 
@@ -174,6 +176,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.searchToolbar -> doSearch(item)
+            else -> super.onOptionsItemSelected(item)
         }
         return true
     }
