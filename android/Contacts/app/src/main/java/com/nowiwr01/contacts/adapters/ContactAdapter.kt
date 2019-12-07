@@ -1,5 +1,8 @@
 package com.nowiwr01.contacts.adapters
 
+import com.nowiwr01.contacts.view.MainActivity.Companion.CHANGE
+import com.nowiwr01.contacts.view.MainActivity.Companion.NOT_FOUND_TAG
+import com.nowiwr01.contacts.view.MainActivity.Companion.RESPONSE
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -17,26 +20,18 @@ import kotlinx.android.synthetic.main.contact_item.view.*
 import java.util.*
 import kotlin.collections.ArrayList
 
-const val CHANGE = 1703
-const val RESPONSE = "response"
-const val NOT_FOUND_TAG = "notFound"
-
 class ContactAdapter(
     var contactList: ArrayList<Contact>,
     private val context: Context,
-    private val onClick: (Contact) -> Unit
+    private val onClickPhone: (Contact) -> Unit,
+    private val onClickSms: (Contact) -> Unit
 ) : RecyclerView.Adapter<ContactAdapter.ContactViewHolder>(), Filterable {
 
     private var isChange = 0
     var contactListFull: ArrayList<Contact> = ArrayList(contactList)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
-        val holder = ContactViewHolder(LayoutInflater.from(context).inflate(R.layout.contact_item, parent, false))
-        holder.itemView.setOnClickListener {
-            onClick(contactList[holder.adapterPosition])
-        }
-        return holder
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder =
+        ContactViewHolder(LayoutInflater.from(context).inflate(R.layout.contact_item, parent, false))
 
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
         holder.bind(contactList[position], context)
@@ -48,7 +43,8 @@ class ContactAdapter(
 
         private val name: TextView = itemView.profile_name
         private val phone: TextView = itemView.profile_prone_number
-        private var profileIcon: ImageView = itemView.profile_image
+        private val profileIcon: ImageView = itemView.profile_image
+        private val iconSendSms: ImageView = itemView.profile_img_send
 
         fun bind(contactItem: Contact, context: Context) {
             name.text = contactItem.name
@@ -56,6 +52,9 @@ class ContactAdapter(
 
             val resourceID = context.resources.getIdentifier(contactItem.profileIcon, "drawable", context.packageName)
             profileIcon.setImageResource(resourceID)
+
+            iconSendSms.setOnClickListener { onClickSms(contactItem) }
+            itemView.setOnClickListener { onClickPhone(contactItem) }
         }
     }
 

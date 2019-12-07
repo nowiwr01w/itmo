@@ -10,7 +10,7 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.filters.LargeTest
 import androidx.test.rule.GrantPermissionRule
 import androidx.test.runner.AndroidJUnit4
-import com.nowiwr01.contacts.controller.MainActivity
+import com.nowiwr01.contacts.view.MainActivity
 import junit.framework.Assert.assertNotNull
 import org.hamcrest.CoreMatchers
 import org.junit.Before
@@ -24,7 +24,10 @@ import org.junit.runner.RunWith
 class NotFoundVisibilityTest {
 
     @get:Rule
-    var permissionRule = GrantPermissionRule.grant(android.Manifest.permission.READ_CONTACTS)!!
+    var permissionSMSRule = GrantPermissionRule.grant(android.Manifest.permission.SEND_SMS)!!
+
+    @get:Rule
+    var permissionContactsRule = GrantPermissionRule.grant(android.Manifest.permission.READ_CONTACTS)!!
 
     @Before
     fun setUp() {

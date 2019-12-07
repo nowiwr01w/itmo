@@ -2,9 +2,10 @@ package com.nowiwr01.contacts
 
 import androidx.test.rule.ActivityTestRule
 import com.nowiwr01.contacts.adapters.ContactAdapter
-import com.nowiwr01.contacts.controller.MainActivity
+import com.nowiwr01.contacts.view.MainActivity
 import com.nowiwr01.contacts.model.Contact
 import org.junit.Assert
+import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -32,25 +33,25 @@ class SearchTest {
 
     @Test
     fun searchByNameTest(){
-        Assert.assertEquals(contacts, search(""))
-        Assert.assertEquals(arrayListOf(contacts[5]), search("OM"))
-        Assert.assertEquals(arrayListOf(contacts[3], contacts[4]), search("  VaRyA "))
-        Assert.assertEquals(arrayListOf(contacts[0], contacts[1], contacts[2]), search("And"))
+        assertEquals(contacts, search(""))
+        assertEquals(arrayListOf(contacts[5]), search("OM"))
+        assertEquals(arrayListOf(contacts[3], contacts[4]), search("  VaRyA "))
+        assertEquals(arrayListOf(contacts[0], contacts[1], contacts[2]), search("And"))
     }
 
     @Test
     fun searchByNPhoneTest(){
-        Assert.assertEquals(contacts, search(""))
-        Assert.assertEquals(arrayListOf<Contact>(), search("8950"))
-        Assert.assertEquals(arrayListOf(contacts[6]), search("251"))
-        Assert.assertEquals(arrayListOf(contacts[4]), search("966"))
-        Assert.assertEquals(arrayListOf(contacts[0], contacts[2], contacts[3]), search("+7951"))
+        assertEquals(contacts, search(""))
+        assertEquals(arrayListOf<Contact>(), search("8950"))
+        assertEquals(arrayListOf(contacts[6]), search("251"))
+        assertEquals(arrayListOf(contacts[4]), search("966"))
+        assertEquals(arrayListOf(contacts[0], contacts[2], contacts[3]), search("+7951"))
     }
 
     @Test
     fun searchByFullNameOrPhone() {
-        Assert.assertEquals(arrayListOf<Contact>(), search("+79500000000"))
-        Assert.assertEquals(arrayListOf(contacts[4]), search("+380996639599"))
-        Assert.assertEquals(arrayListOf(contacts[0]), search("Andrey Default"))
+        assertEquals(arrayListOf<Contact>(), search("+79500000000"))
+        assertEquals(arrayListOf(contacts[4]), search("+380996639599"))
+        assertEquals(arrayListOf(contacts[0]), search("Andrey Default"))
     }
 }

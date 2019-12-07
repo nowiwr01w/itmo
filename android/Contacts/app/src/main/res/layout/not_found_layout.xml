@@ -5,12 +5,12 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:visibility="gone"
         android:id="@+id/imgNotFound"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="@drawable/ic_question"
         android:contentDescription="@string/not_found_image"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,11 +18,11 @@
 
     <TextView
         android:id="@+id/tvNotFound"
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/not_found_string"
         android:textSize="18sp"
+        android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgNotFound" />

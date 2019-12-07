@@ -4,7 +4,7 @@ import android.app.Activity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.RecyclerView
-import com.nowiwr01.contacts.controller.MainActivity
+import com.nowiwr01.contacts.view.MainActivity
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
