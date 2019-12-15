@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="home_search_hint">Введите город</string>
+    <string name="not_found">Не найдено!</string>
+    <string name="hourly_forecast_image">Hourly Forecast Image</string>
+    <string name="search">Search</string>
+    <string name="change_theme">Change theme</string>
+    <string name="example">Example</string>
+    <string name="drop_icon">drop icon</string>
+    <string name="flag_icon">flag icon</string>
+    <string name="example_temp">52°</string>
+    <string name="icon_daily">Icon daily</string>
+    <string name="main_weather_icon">Main Weather Icon</string>
+</resources>
