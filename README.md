@@ -2,10 +2,11 @@
 Some paradigms course homeworks are left, but JS and Clojure tasks are in the repo.
 ## [Android Course](https://github.com/nowiwr01/itmo/tree/master/android/)
   Description and screenshots of each task are inside a root folder
-  * [Weather](https://github.com/nowiwr01/itmo/tree/master/android/Weather)
   * [Contacts](https://github.com/nowiwr01/itmo/tree/master/android/Contacts)
   * [Networking](https://github.com/nowiwr01/itmo/tree/master/android/Networking)
   * [Navigation](https://github.com/nowiwr01/itmo/tree/master/android/Navigation)
+  * [CustomView](https://github.com/nowiwr01/itmo/tree/master/android/CustomView)
+  * [Weather](https://github.com/nowiwr01/itmo/tree/master/android/Weather)
 
 ## [Algorithms and Data Structures](https://github.com/nowiwr01/itmo/tree/master/algo/)
   There are some contests solutions. Description of each task inside each folder.
