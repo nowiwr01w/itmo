@@ -6,6 +6,21 @@
  * [Веда Воронина](https://vk.com/veda345) (Команда ВКонтакте)
  * [Валерий Маевский](https://vk.com/id52033806) (Одноклассники)
 
+# [Weather](https://github.com/nowiwr01/itmo/tree/master/android/Weather)
+Хочу добавить ещё Room, но пока что пусть будет вот так. Краткое описание:
+### Что было использовано в проекте?
+* ConsraintLayout
+* RecyclerView + CardView
+* Retrofit2
+* RxJava2
+### Screenshots
+<div style="display:flex" >
+ <img src="https://github.com/nowiwr01/itmo/blob/master/android/Weather/screenshots/1n.jpg" width="200px" style="margin: 30px;" /> 
+ <img src="https://github.com/nowiwr01/itmo/blob/master/android/Weather/screenshots/1d.jpg" width="200px" style="margin: 30px;" /> 
+ <img src="https://github.com/nowiwr01/itmo/blob/master/android/Weather/screenshots/2n.jpg" width="200px" style="margin: 30px;" /> 
+ <img src="https://github.com/nowiwr01/itmo/blob/master/android/Weather/screenshots/2d.jpg" width="200px" style="margin: 30px;" /> 
+</div>
+
 # [Contacts](https://github.com/nowiwr01/itmo/tree/master/android/Contacts)
 ### Что нужно сделать?
   * Поиграться с разрешениями. Например, по клику на очередной item открывать звонилку, но не начинать вызов.
