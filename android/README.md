@@ -22,6 +22,9 @@
 </div>
 
 # [Contacts](https://github.com/nowiwr01/itmo/tree/master/android/Contacts)
+
+<img src="https://github.com/nowiwr01/itmo/blob/master/android/Contacts/Contacts.gif" width="200px" /> 
+
 ### Что нужно сделать?
   * Поиграться с разрешениями. Например, по клику на очередной item открывать звонилку, но не начинать вызов.
   * Использовать `plurals`: выводить информацию о количестве контактов.
