@@ -5,14 +5,14 @@
  * [Герман Бережко](https://vk.com/gerra23) (Команда ВКонтакте)
  * [Веда Воронина](https://vk.com/veda345) (Команда ВКонтакте)
  * [Валерий Маевский](https://vk.com/id52033806) (Одноклассники)
+ 
+ ### Скоро будут добавлены:
+  * HW8 - Weather + Room
+  * HW10 - CameraX + Sensors
 
 # [Weather](https://github.com/nowiwr01/itmo/tree/master/android/Weather)
 Хочу добавить ещё Room, но пока что пусть будет вот так. Краткое описание:
-### Что было использовано в проекте?
-* ConsraintLayout
-* RecyclerView + CardView
-* Retrofit2
-* RxJava2
+
 ### Screenshots
 <div style="display:flex" >
  <img src="https://github.com/nowiwr01/itmo/blob/master/android/Weather/screenshots/1n.jpg" width="200px" style="margin: 30px;" /> 
@@ -21,8 +21,15 @@
  <img src="https://github.com/nowiwr01/itmo/blob/master/android/Weather/screenshots/2d.jpg" width="200px" style="margin: 30px;" /> 
 </div>
 
+### Что было использовано в проекте?
+* ConsraintLayout
+* RecyclerView + CardView
+* Retrofit2
+* RxJava2
+
 # [Contacts](https://github.com/nowiwr01/itmo/tree/master/android/Contacts)
 
+### How does it look like?
 <img src="https://github.com/nowiwr01/itmo/blob/master/android/Contacts/Contacts.gif" width="200px" /> 
 
 ### Что нужно сделать?
@@ -51,6 +58,9 @@
   * Robolectric и Espresso
 
 # [Networking](https://github.com/nowiwr01/itmo/tree/master/android/Networking)
+### How does it look like?
+<img src="https://github.com/nowiwr01/itmo/blob/master/android/Networking/Networking.gif" width="200px" /> 
+
 ### Что нужно сделать?
   * Немного пострадать. В этой домашке ходим в сеть только через `HttpURLConnection`.
   * Взять любое API и сделать список с превьюшками. В данном проекте используется [The Open Movie Database](https://www.omdbapi.com/)
@@ -70,6 +80,9 @@
   * IntentService
 
 # [Navigation](https://github.com/nowiwr01/itmo/tree/master/android/Navigation)
+### How does it look like?
+<img src="https://github.com/nowiwr01/itmo/blob/master/android/Navigation/Navigation.gif" width="200px" /> 
+
 ### Что нужно сделать?
   * Создать 3 таба. В каждом - свой бэкстэк. 
   * Всё должно быть на фрагментах (с одной активити).
@@ -87,3 +100,25 @@
 ### Что было использовано в проекте?
   * ConstraintLayout
   * Fragments + Animations
+
+# [CustomView](https://github.com/nowiwr01/itmo/tree/master/android/CustomView)
+### How does it look like?
+<img src="https://github.com/nowiwr01/itmo/blob/master/android/CustomView/CustomView.gif" width="200px" />
+
+### Что нужно сделать и что сделано?
+  * Создать `View`, которая бесконечно анимируется.
+  * Текст должен просто менять свою альфу. 
+  * Размеры:
+    * Толщина линии крестика, высота и ширина точек – 6dp.
+    * Длина линии крестика – 22dp.
+    * Точки и линии креста – на самом деле roundRect-ы с радиусом скругления 2.5dp по двум осям.
+    * Расстояние по горизонтали и вертикали между верхней и левой точками – 6dp.
+    * То есть, по сути, крест вписан в квадрат 22x22 и четыре точки тоже образуют квадрат 22х22 (22=6*11/3).
+    * Расстояние между крестиком и левой точкой – 16dp.
+  * Тайминги:
+    * Задержка старта анимации 1 секунда.
+    * За 0.3 секунды:
+      * Крестик поворачивается на 180°
+      * Точка изменяет свой размер с 1 до 1.3 и с 1.3 до 1
+      * В это же время начинает изменять свой размер следующая точка с 1 до 1.3
+    * Повторяем со всеми точками, возвращаемся к 1 пункту.
