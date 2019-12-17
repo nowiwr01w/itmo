@@ -26,6 +26,7 @@
 * RecyclerView + CardView
 * Retrofit2
 * RxJava2
+* MVP
 
 # [Contacts](https://github.com/nowiwr01/itmo/tree/master/android/Contacts)
 
