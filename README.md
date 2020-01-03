@@ -1,5 +1,5 @@
 # Material courses at ITMO University
-Some paradigms course homeworks are left, but JS and Clojure tasks are in the repo.
+Some paradigms course homeworks (Java) are left, but JS and Clojure tasks are in the repo.
 ## [Android Course](https://github.com/nowiwr01/itmo/tree/master/android/)
   Description and screenshots of each task are inside a root folder
   * [Contacts](https://github.com/nowiwr01/itmo/tree/master/android/Contacts)
@@ -9,7 +9,7 @@ Some paradigms course homeworks are left, but JS and Clojure tasks are in the re
   * [Weather](https://github.com/nowiwr01/itmo/tree/master/android/Weather)
 
 ## [Algorithms and Data Structures](https://github.com/nowiwr01/itmo/tree/master/algo/)
-  There are some contests solutions. Description of each task inside each folder.
+  There are some contests solutions. Description of each task is inside each folder.
   * [Sortings, Heap, Binary search and Ternary search](https://github.com/nowiwr01/itmo/tree/master/algo/1%20term/lab1)
   * [Stack, Queue, Deque, DSU](https://github.com/nowiwr01/itmo/tree/master/algo/1%20term/lab2)
   * [Dynamic Programming](https://github.com/nowiwr01/itmo/tree/master/algo/1%20term/lab3)
@@ -18,9 +18,10 @@ Some paradigms course homeworks are left, but JS and Clojure tasks are in the re
   * [Queries on tree: LCA, RMQ, etc](https://github.com/nowiwr01/itmo/tree/master/algo/2%20term/laba3)
   * [Connected Components, DFS, MST](https://github.com/nowiwr01/itmo/tree/master/algo/3%20term/lab1)
   * [Shortest Path](https://github.com/nowiwr01/itmo/tree/master/algo/3%20term/lab2)
+  * [Strings: Hash, KMP (Z & Prefix)](https://github.com/nowiwr01/itmo/tree/master/algo/3%20term/lab2)
   
 ## [Discrete Math](https://github.com/nowiwr01/itmo/tree/master/discrete_math/)
-  There are some contests solutions. Description of each task inside each folder.
+  There are some contests solutions. Description of each task is inside each folder.
   * [Boolean Functions](https://github.com/nowiwr01/itmo/tree/master/discrete_math/1%20term/lab1)
   * [Compression](https://github.com/nowiwr01/itmo/tree/master/discrete_math/1%20term/lab2)
   * [Combinatorics](https://github.com/nowiwr01/itmo/tree/master/discrete_math/1%20term/lab3)
