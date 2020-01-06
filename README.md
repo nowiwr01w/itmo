@@ -6,7 +6,7 @@ Some paradigms course homeworks (Java) are left, but JS and Clojure tasks are in
   * [Networking](https://github.com/nowiwr01/itmo/tree/master/android/Networking)
   * [Navigation](https://github.com/nowiwr01/itmo/tree/master/android/Navigation)
   * [CustomView](https://github.com/nowiwr01/itmo/tree/master/android/CustomView)
-  * [Weather](https://github.com/nowiwr01/itmo/tree/master/android/Weather)
+  * [Weather](https://github.com/nowiwr01/Weather)
 
 ## [Algorithms and Data Structures](https://github.com/nowiwr01/itmo/tree/master/algo/)
   There are some contests solutions. Description of each task is inside each folder.
