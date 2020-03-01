@@ -30,6 +30,12 @@ Some paradigms course homeworks (Java) are left, but JS and Clojure tasks are in
   * [Context-free Grammar](https://github.com/nowiwr01/itmo/tree/master/discrete_math/2%20term/lab3)
   * [Hamiltonian Cycles](https://github.com/nowiwr01/itmo/tree/master/discrete_math/3%20term/lab1)
 
+## [Programming Technology](https://github.com/nowiwr01/itmo/tree/master/java_advanced/)
+  Java advanced couse homeworks. Description of each task is inside the root folder.
+  * [Files Walkthrough](https://github.com/nowiwr01/itmo/tree/master/java_advanced/src/ru/ifmo/rain/larionov/walk)
+  * [Sorted Set Implementation](https://github.com/nowiwr01/itmo/tree/master/java_advanced/src/ru/ifmo/rain/larionov/arrayset)
+  * [Students Database](https://github.com/nowiwr01/itmo/tree/master/java_advanced/src/ru/ifmo/rain/larionov/student)
+
 ## [Java Course](https://github.com/nowiwr01/itmo/tree/master/prog_intro)
   There are some first term homeworks. Description of each task is inside the root folder.
   * [Calculating numbers](https://github.com/nowiwr01/itmo/tree/master/prog_intro/HW1)
