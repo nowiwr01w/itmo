@@ -76,3 +76,14 @@ Output:
 
 Запуск:
 * `java -cp . -p . -m info.kgeorgiy.java.advanced.student StudentQuery ru.ifmo.rain.larionov.student.StudentDB`
+
+## [Домашнее задание 4. Генератор реализации интерфейсов](https://github.com/nowiwr01/itmo/tree/master/java_advanced/src/ru/ifmo/rain/larionov/student)
+Реализуйте класс `Implementor`, который будет генерировать реализации классов и интерфейсов.
+* Аргументы командной строки: полное имя класса/интерфейса, для которого требуется сгенерировать реализацию.
+* В результате работы должен быть сгенерирован java-код класса с суффиксом Impl, расширяющий (реализующий) указанный класс (интерфейс).
+* Сгенерированный класс должен компилироваться без ошибок.
+* Сгенерированный класс не должен быть абстрактным.
+* Методы сгенерированного класса должны игнорировать свои аргументы и возвращать значения по умолчанию.
+
+Запуск:
+* `java -cp . -p . -m info.kgeorgiy.java.advanced.implementor interface ru.ifmo.rain.larionov.implementor.Implementor`

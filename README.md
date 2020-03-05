@@ -35,6 +35,7 @@ Some paradigms course homeworks (Java) are left, but JS and Clojure tasks are in
   * [Files Walkthrough](https://github.com/nowiwr01/itmo/tree/master/java_advanced/src/ru/ifmo/rain/larionov/walk)
   * [Sorted Set Implementation](https://github.com/nowiwr01/itmo/tree/master/java_advanced/src/ru/ifmo/rain/larionov/arrayset)
   * [Students Database](https://github.com/nowiwr01/itmo/tree/master/java_advanced/src/ru/ifmo/rain/larionov/student)
+  * [Generate Interfaces Implementation](https://github.com/nowiwr01/itmo/tree/master/java_advanced/src/ru/ifmo/rain/larionov/implementor)
 
 ## [Java Course](https://github.com/nowiwr01/itmo/tree/master/prog_intro)
   There are some first term homeworks. Description of each task is inside the root folder.
