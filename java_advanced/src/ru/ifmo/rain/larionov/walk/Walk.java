@@ -17,6 +17,15 @@ public class Walk {
     private static final int PRIME = 0x01000193;
     private static final int ERROR = 0;
 
+    private static int getHash(final byte[] bytes, final int count, int hash) {
+        for (int i = 0; i < count; i++) {
+            byte b = bytes[i];
+            hash *= PRIME;
+            hash ^= (b & 0xff);
+        }
+        return hash;
+    }
+
     private static int calculateHash(final String fileName) {
         Path path;
         try {
@@ -35,15 +44,6 @@ public class Walk {
             return ERROR;
         }
         return hashRes;
-    }
-
-    private static int getHash(final byte[] bytes, final int count, int hash) {
-        for (int i = 0; i < count; i++) {
-            byte b = bytes[i];
-            hash *= PRIME;
-            hash ^= (b & 0xff);
-        }
-        return hash;
     }
 
     public static void main(String[] args) {
