@@ -1,144 +1,112 @@
 package ru.ifmo.rain.larionov.arrayset;
 
 import java.util.*;
+import static java.util.Collections.emptyList;
 
-public class ArraySet<T> extends AbstractSet<T> implements SortedSet<T> {
-    private final List<T> data;
-    private final Comparator<? super T> comparator;
+public class ArraySet<T extends Comparable<? super T>> extends AbstractSet<T> implements SortedSet<T> {
+
+    private final List<T> mData;
+    private final Comparator<? super T> mComparator;
 
     public ArraySet() {
-        data = Collections.emptyList();
-        comparator = null;
+        this(emptyList(), null);
     }
 
-    public ArraySet(Collection<T> data) {
-        Set<T> treeSet = new TreeSet<>(data);
-        this.data = new ArrayList<>(treeSet);
-        comparator = null;
-    }
-
-    public ArraySet(Comparator<? super T> comparator) {
-        data = Collections.emptyList();
-        this.comparator = comparator;
-    }
-
-    public ArraySet(Collection<T> data, Comparator<? super T> comparator) {
-        TreeSet<T> treeSet = new TreeSet<>(comparator);
-        treeSet.addAll(data);
-        this.data = new ArrayList<>(treeSet);
-        this.comparator = comparator;
+    public ArraySet(Collection<T> collection) {
+        this(collection, null);
     }
 
     private ArraySet(List<T> data, Comparator<? super T> comparator) {
-        this.data = data;
-        this.comparator = comparator;
+        mData = data;
+        mComparator = comparator;
     }
 
-    private ArraySet<T> emptySet(Comparator<? super T> comparator) {
-        return new ArraySet<T>(comparator);
-    }
-
-    private boolean checkInd(int ind) {
-        return 0 <= ind && ind <= size();
-    }
-
-    private int getInd(T t) {
-        int result = Collections.binarySearch(data, Objects.requireNonNull(t), comparator);
-        if (result < 0) {
-            result = -result - 1;
-            if (result == size()) {
-                return result;
-            }
+    public ArraySet(Collection<T> collection, Comparator<? super T> comparator) {
+        mComparator = comparator;
+        if (!collection.isEmpty()) {
+            TreeSet<T> treeSet = new TreeSet<>(comparator);
+            treeSet.addAll(collection);
+            mData = List.copyOf(treeSet);
+        } else {
+            mData = emptyList();
         }
-        return checkInd(result) ? result : -1;
-    }
-
-    @SuppressWarnings("unchecked")
-    private int compare(T e1, T e2) {
-        return comparator() == null ? ((Comparable<? super T>) e1).compareTo(e2) : comparator().compare(e1, e2);
     }
 
     @Override
     public Iterator<T> iterator() {
-        return Collections.unmodifiableList(data).iterator();
+        return mData.iterator();
     }
-
-    @Override
-    public int size() {
-        return data.size();
-    }
-
-
-    @Override
-    public boolean isEmpty() {
-        return data.isEmpty();
-    }
-
-    @SuppressWarnings("unchecked")
-    @Override
-    public boolean contains(Object o) {
-        return Collections.binarySearch(data, (T) Objects.requireNonNull(o), comparator) >= 0;
-    }
-
 
     @Override
     public Comparator<? super T> comparator() {
-        return comparator;
+        return mComparator;
     }
 
-    private SortedSet<T> subSet(T fromElement, T toElement, boolean includeLast) {
-
-        int l = getInd(fromElement);
-        int r = getInd(toElement);
-        if (includeLast && r >= 0) {
-            r++;
-        }
-        if (l == -1 || r == -1 || l >= r) {
-            return emptySet(comparator);
-        }
-
-        return new ArraySet<>(data.subList(l, r), comparator);
+    private int indexOf(T element) {
+        int index = Collections.binarySearch(mData, element, mComparator);
+        return index >= 0 ? index : inversion(index);
     }
 
-    @Override
-    public SortedSet<T> subSet(T fromElement, T toElement) {
-        if (compare(fromElement, toElement) > 0) {
-            throw new IllegalArgumentException("Start element is greater than end element");
-        }
-        return subSet(fromElement, toElement, false);
+    private int inversion(int index) {
+        return -(index + 1);
     }
 
     @Override
     public SortedSet<T> headSet(T toElement) {
-        if (data.isEmpty()) {
-            return emptySet(comparator);
-        }
-        return subSet(first(), toElement, false);
+        return subSet(0, indexOf(toElement));
     }
 
     @Override
     public SortedSet<T> tailSet(T fromElement) {
-        if (data.isEmpty()) {
-            return emptySet(comparator);
-        }
-        return subSet(fromElement, last(), true);
+        return subSet(indexOf(fromElement), mData.size());
     }
 
-    private void checkEmpty() {
-        if (data.isEmpty()) {
-            throw new NoSuchElementException("ArraySet is empty");
+    private SortedSet<T> subSetIndexed(T fromElement, T toElement) {
+        return subSet(indexOf(fromElement), indexOf(toElement));
+    }
+
+    private SortedSet<T> subSet(int from, int to) {
+        return new ArraySet<>(mData.subList(from, to), mComparator);
+    }
+
+    @Override
+    public SortedSet<T> subSet(T fromElement, T toElement) {
+        Comparator<? super T> comparator = mComparator != null ? mComparator : Comparator.naturalOrder();
+        int comparison = comparator.compare(fromElement, toElement);
+        if (comparison > 0) {
+            throw new IllegalArgumentException();
+        } else if (comparison == 0) {
+            return new ArraySet<T>(emptyList(), mComparator);
+        } else {
+            return subSetIndexed(fromElement, toElement);
         }
+    }
+
+    @Override
+    public int size() {
+        return mData.size();
     }
 
     @Override
     public T first() {
         checkEmpty();
-        return data.get(0);
+        return mData.get(0);
     }
 
     @Override
     public T last() {
         checkEmpty();
-        return data.get(size() - 1);
+        return mData.get(size() - 1);
+    }
+
+    private void checkEmpty() {
+        if (size() == 0) {
+            throw new NoSuchElementException();
+        }
+    }
+
+    @Override
+    public boolean contains(Object object) {
+        return Collections.binarySearch(mData, (T) Objects.requireNonNull(object), mComparator) >= 0;
     }
 }
