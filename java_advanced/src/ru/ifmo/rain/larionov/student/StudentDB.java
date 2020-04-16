@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 public class StudentDB implements StudentQuery {
 
-    private final Comparator<Student> studentComparator =
+    private final Comparator<Student> mComparator =
             Comparator.comparing(Student::getLastName).thenComparing(Student::getFirstName).thenComparingInt(Student::getId);
 
     private List<String> mappedStudents(List<Student> students, Function<Student, String> map) {
@@ -64,22 +64,22 @@ public class StudentDB implements StudentQuery {
 
     @Override
     public List<Student> sortStudentsByName(Collection<Student> collection) {
-        return sortedStudents(collection, studentComparator);
+        return sortedStudents(collection, mComparator);
     }
 
     @Override
     public List<Student> findStudentsByFirstName(Collection<Student> collection, String firstName) {
-        return filteredStudents(collection, studentComparator, student -> student.getFirstName().equals(firstName));
+        return filteredStudents(collection, mComparator, student -> student.getFirstName().equals(firstName));
     }
 
     @Override
     public List<Student> findStudentsByLastName(Collection<Student> collection, String lastName) {
-        return filteredStudents(collection, studentComparator, student -> student.getLastName().equals(lastName));
+        return filteredStudents(collection, mComparator, student -> student.getLastName().equals(lastName));
     }
 
     @Override
     public List<Student> findStudentsByGroup(Collection<Student> collection, String group) {
-        return filteredStudents(collection, studentComparator, student -> student.getGroup().equals(group));
+        return filteredStudents(collection, mComparator, student -> student.getGroup().equals(group));
     }
 
     @Override
