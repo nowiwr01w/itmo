@@ -1,0 +1,50 @@
+start: write_go_to_end
+accept: ac
+reject: rj
+blank: _
+
+write_go_to_end 0 -> go_to_end a >
+write_go_to_end 1 -> go_to_end b >
+write_go_to_end a -> fill_second_part a ^
+write_go_to_end b -> fill_second_part b ^
+
+go_to_end 0 -> go_to_end 0 >
+go_to_end 1 -> go_to_end 1 >
+go_to_end a -> write_go_to_begin a <
+go_to_end b -> write_go_to_begin b <
+go_to_end _ -> write_go_to_begin _ <
+
+write_go_to_begin 0 -> go_to_begin a <
+write_go_to_begin 1 -> go_to_begin b <
+write_go_to_begin a -> rj a <
+write_go_to_begin b -> rj b <
+
+go_to_begin 0 -> go_to_begin 0 <
+go_to_begin 1 -> go_to_begin 1 <
+go_to_begin a -> write_go_to_end a >
+go_to_begin b -> write_go_to_end b >
+
+fill_second_part a -> fill_second_part 0 >
+fill_second_part b -> fill_second_part 1 >
+fill_second_part _ -> check _ <
+
+check 0 -> go_left_check_a * <
+check 1 -> go_left_check_b * <
+check # -> ac # ^
+
+go_left_check_a 0 -> go_left_check_a 0 <
+go_left_check_a 1 -> go_left_check_a 1 <
+go_left_check_a # -> go_left_check_a # <
+go_left_check_a a -> go_right # >
+go_left_check_a b -> rj b <
+
+go_left_check_b 0 -> go_left_check_b 0 <
+go_left_check_b 1 -> go_left_check_b 1 <
+go_left_check_b # -> go_left_check_b # <
+go_left_check_b a -> rj a <
+go_left_check_b b -> go_right # >
+
+go_right # -> go_right # >
+go_right 0 -> go_right 0 >
+go_right 1 -> go_right 1 >
+go_right * -> check * <
