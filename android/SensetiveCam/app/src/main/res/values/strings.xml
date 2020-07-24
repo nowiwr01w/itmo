@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HW10-Camera</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit_the_path">Edit the path</string>
+    <string name="change">Change!</string>
+</resources>
