@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Networking</string>
-    <string name="movie_picture_content_description">Movie picture</string>
-    <string name="film_name">Film name</string>
-    <string name="year">Year</string>
-    <string name="search">Search</string>
-    <string name="film_image">Film image</string>
-</resources>

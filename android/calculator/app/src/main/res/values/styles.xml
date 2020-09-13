@@ -1,0 +1,65 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextViewButton">
+        <item name="android:checkable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">@color/calc_number_color</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextViewOperators">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/operator_shape</item>
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">@color/operator_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="TextViewOperatorsLand" parent="TextViewOperators">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@color/operator_background</item>
+    </style>
+
+    <style name="TextViewOperatorEqualsLand" parent="TextViewOperatorsLand">
+        <item name="android:background">@color/operator_eq_background_land</item>
+    </style>
+
+    <style name="TextViewAnswer">
+        <item name="android:textIsSelectable">true</item>
+        <item name="android:scrollbars">horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:text">@string/example_text</item>
+        <item name="android:textSize">56sp</item>
+        <item name="android:layout_marginBottom">24dp</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>
